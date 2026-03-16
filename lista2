@@ -109,6 +109,12 @@ def q6():
 #crescente.
 
 #11. Faça um programa que leia 3 números e imprima o maior deles.
+def q11():
+maior = inputint('digite um numero interio')
+numero = inputint('digite um segundo numero:')
+if numero > maior:
+    maior = numero
+print(f'o maior numero informado é {maior}')
 
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
