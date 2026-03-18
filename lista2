@@ -174,10 +174,35 @@ def q13():
 #Maior que R$1200,00 e menor ou igual a R$2000,00 25%
 #Maior que R$2000,00 30%
 
+def q14():
+    salario = float(input("Digite o salário: R$ "))
+
+    if salario <= 600:
+        desconto = 0
+    elif salario <= 1200:
+        desconto = salario * 0.20
+    elif salario <= 2000:
+        desconto = salario * 0.25
+    else:
+        desconto = salario * 0.30
+
+print(f"Desconto INSS: R$ {desconto:.2f}")
+print(f"Salário Final: R$ {salario - desconto:.2f}")
+
 
 #15. Um comerciante comprou um produto e quer vendê-lo com um lucro de 45% se o
 #valor da compra for menor que R$20,00, caso contrário, o lucro será de 30%.
 #Faça um programa que leia o valor do produto e imprima o valor da venda.
+
+def q15():
+    valor_compra = float(input("Digite o valor de compra: R$ "))
+
+    if valor_compra < 20.00:
+        valor_venda = valor_compra * 1.45
+    else:
+        valor_venda = valor_compra * 1.30
+
+    print(f"Valor de venda: R$ {valor_venda:.2f}")
 
 
 #16. A confederação brasileira de natação irá promover eliminatórias para o
@@ -189,6 +214,24 @@ def q13():
 #Juvenil A 11 - 13 anos
 #Juvenil B 14 - 17 anos
 #Sênior maiores de 18 anos
+
+def q16():
+    idade = int(input("Digite a idade do nadador: "))
+
+    if 5 <= idade <= 7:
+        categoria = "Infantil A"
+    elif 8 <= idade <= 10:
+        categoria = "Infantil B"
+    elif 11 <= idade <= 13:
+        categoria = "Juvenil A"
+    elif 14 <= idade <= 17:
+        categoria = "Juvenil B"
+    elif idade >= 18:
+        categoria = "Sênior"
+    else:
+        categoria = "Idade fora das categorias oficiais"
+
+    print(f"Categoria: {categoria}")
 
 
 #17. Depois da liberação do governo para as mensalidades dos planos de saúde,
@@ -204,10 +247,43 @@ def q13():
 #Acima de 59 até 65 anos R$250,00
 #Maior que 65 anos R$400,00
 
+def q17():
+    nome = input("Digite o nome da pessoa: ")
+    idade = int(input("Digite a idade da pessoa: "))
+
+    if idade <= 10:
+        valor = 30.00
+    elif idade <= 29:
+        valor = 60.00
+    elif idade <= 45:
+        valor = 120.00
+    elif idade <= 59:
+        valor = 150.00
+    elif idade <= 65:
+        valor = 250.00
+    else:
+        valor = 400.00
+
+    print(f"\nNome: {nome}")
+    print(f"Valor a pagar: R$ {valor:.2f}")
+
 
 #18. Faça um programa que leia um número inteiro entre 1 e 12 e escreva o mês
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
+
+def q18():,
+    meses = [
+        "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ]
+    
+    numero = int(input("Digite o número do mês (1 a 12): "))
+
+    if 1 <= numero <= 12:
+        print(f"O mês correspondente é: {meses[numero - 1]}")
+    else:
+        print("Não existe mês com este número.")
 
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
